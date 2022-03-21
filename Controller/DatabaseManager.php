@@ -25,9 +25,6 @@ class DatabaseManager
     public function connect(): void
     {
         // TODO: make the connection to the database
-        
-        
-
         try {
            
            $this->connection = new PDO ("mysql:host={$this->host};dbname={$this->dbname}", $this->user, $this->password);

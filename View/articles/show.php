@@ -1,6 +1,6 @@
 <?php require 'View/includes/header.php'?>
 
-<?php // Use any data loaded in the controller here ?>
+<?php //workspace ?>
 
 <section>
     <h1><?= $article->title ?></h1>
@@ -8,8 +8,8 @@
     <p><?= $article->description ?></p>
 
     <?php // TODO: links to next and previous ?>
-    <a href="#">Previous article</a>
-    <a href="#">Next article</a>
+    <a href="index.php?page=articles-show&id=<?=$this->getPreviousID($article->id);?>">Previous article</a>
+    <a href="index.php?page=articles-show&id=<?=$this->getNextID($article->id);?>">Next article</a>
 </section>
 
 <?php require 'View/includes/footer.php'?>
